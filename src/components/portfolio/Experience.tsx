@@ -7,7 +7,7 @@ export function Experience() {
       id="experience"
       className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-36"
     >
-      <SectionLabel index="04" title="Experience" />
+      <SectionLabel index="03" title="Experience" />
 
       <ol className="border-t border-border">
         {experience.map((e, i) => (

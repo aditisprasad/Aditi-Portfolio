@@ -4,7 +4,7 @@ import { Reveal, SectionLabel } from "./Reveal";
 export function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-36">
-      <SectionLabel index="05" title="Skills" />
+      <SectionLabel index="04" title="Skills" />
 
       <div className="space-y-14">
         {skills.map((group, i) => (
