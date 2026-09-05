@@ -131,7 +131,7 @@ export function Portrait3D() {
         {/* floating editorial chip */}
         <motion.div
           style={{ transform: "translateZ(90px)" }}
-          className="absolute -left-6 bottom-16 hidden border border-border bg-card/85 px-3 py-2 backdrop-blur-sm md:block"
+          className="absolute -left-10 bottom-6 hidden border border-border bg-card/90 px-3 py-2 backdrop-blur-sm md:block"
         >
           <span className="label-xs">Software × AI × Data × Product</span>
         </motion.div>
