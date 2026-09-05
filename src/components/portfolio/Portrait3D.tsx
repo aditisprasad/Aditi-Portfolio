@@ -101,15 +101,24 @@ export function Portrait3D() {
             <span className="label-xs">Add your portrait</span>
           </div>
         ) : (
-          <img
-            src={PORTRAIT_SRC}
-            alt="Portrait of Aditi S Prasad"
-            width={800}
-            height={1100}
-            onError={() => setFailed(true)}
-            className="float-shadow relative block w-full object-contain mix-blend-multiply"
+          <div
+            className="float-shadow relative overflow-hidden rounded-[2rem] border border-border bg-card p-2"
             style={{ transform: "translateZ(40px)" }}
-          />
+          >
+            <img
+              src={PORTRAIT_SRC}
+              alt="Portrait of Aditi S Prasad"
+              width={800}
+              height={1100}
+              loading="eager"
+              onError={() => setFailed(true)}
+              className="relative block w-full rounded-[1.6rem] object-cover"
+            />
+            <div
+              aria-hidden="true"
+              className="bloom-rule pointer-events-none absolute inset-x-2 bottom-2 h-px opacity-70"
+            />
+          </div>
         )}
 
         {/* soft floor shadow */}
