@@ -45,17 +45,34 @@ export function Portrait3D() {
         className="soft-light pointer-events-none absolute -inset-16 rounded-full blur-2xl"
       />
 
+      {/* colour aura behind the portrait */}
+      <motion.div
+        aria-hidden="true"
+        style={{ x: useTransform(sx, [-1, 1], [24, -24]), y: glowY }}
+        className="animate-bloom pointer-events-none absolute inset-8 rounded-full opacity-70 blur-[70px]"
+      >
+        <div className="bloom-rule size-full rounded-full opacity-45" />
+      </motion.div>
+
       {/* thin metallic rings + fine lines for depth */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <motion.div
-          style={{ x: useTransform(sx, [-1, 1], [12, -12]) }}
-          className="absolute -left-10 top-16 size-40 rounded-full border border-foreground/10"
+          style={{ x: useTransform(sx, [-1, 1], [14, -14]) }}
+          className="animate-float-soft absolute -left-10 top-16 size-40 rounded-full border border-foreground/10"
         />
         <motion.div
-          style={{ x: useTransform(sx, [-1, 1], [-16, 16]) }}
+          style={{ x: useTransform(sx, [-1, 1], [-18, 18]) }}
           className="absolute -right-8 bottom-24 size-56 rounded-full border border-accent/25"
         />
-        <div className="absolute -bottom-6 left-1/2 h-px w-[120%] -translate-x-1/2 bg-gradient-to-r from-transparent via-foreground/12 to-transparent" />
+        <motion.div
+          style={{ x: useTransform(sx, [-1, 1], [-9, 9]), y: useTransform(sy, [-1, 1], [8, -8]) }}
+          className="soft-shadow absolute right-2 top-8 size-24 rounded-full border border-violet/25 bg-card/40 backdrop-blur-sm"
+        />
+        <motion.div
+          style={{ x: useTransform(sx, [-1, 1], [20, -20]) }}
+          className="animate-float-soft absolute -left-4 bottom-10 size-14 rounded-full border border-mint/40 bg-mint/10"
+        />
+        <div className="absolute -bottom-6 left-1/2 h-px w-[120%] -translate-x-1/2 bg-gradient-to-r from-transparent via-violet/25 to-transparent" />
       </div>
 
       <motion.div
@@ -84,15 +101,24 @@ export function Portrait3D() {
             <span className="label-xs">Add your portrait</span>
           </div>
         ) : (
-          <img
-            src={PORTRAIT_SRC}
-            alt="Portrait of Aditi S Prasad"
-            width={800}
-            height={1100}
-            onError={() => setFailed(true)}
-            className="float-shadow relative block w-full object-contain mix-blend-multiply"
+          <div
+            className="float-shadow relative overflow-hidden rounded-[2rem] border border-border bg-card p-2"
             style={{ transform: "translateZ(40px)" }}
-          />
+          >
+            <img
+              src={PORTRAIT_SRC}
+              alt="Portrait of Aditi S Prasad"
+              width={800}
+              height={1100}
+              loading="eager"
+              onError={() => setFailed(true)}
+              className="relative block w-full rounded-[1.6rem] object-cover"
+            />
+            <div
+              aria-hidden="true"
+              className="bloom-rule pointer-events-none absolute inset-x-2 bottom-2 h-px opacity-70"
+            />
+          </div>
         )}
 
         {/* soft floor shadow */}
@@ -105,7 +131,7 @@ export function Portrait3D() {
         {/* floating editorial chip */}
         <motion.div
           style={{ transform: "translateZ(90px)" }}
-          className="absolute -left-6 bottom-16 hidden border border-border bg-card/85 px-3 py-2 backdrop-blur-sm md:block"
+          className="absolute -left-10 bottom-6 hidden border border-border bg-card/90 px-3 py-2 backdrop-blur-sm md:block"
         >
           <span className="label-xs">Software × AI × Data × Product</span>
         </motion.div>

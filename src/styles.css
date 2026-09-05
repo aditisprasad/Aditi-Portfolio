@@ -154,6 +154,13 @@
     var(--mint) 62%,
     var(--peach) 100%
   );
+  --gradient-ink: linear-gradient(
+    100deg,
+    oklch(0.55 0.16 12) 0%,
+    oklch(0.48 0.17 300) 45%,
+    oklch(0.52 0.12 200) 75%,
+    oklch(0.55 0.16 12) 100%
+  );
 }
 
 @layer base {
@@ -208,7 +215,7 @@
 }
 
 @utility bloom-text {
-  background-image: var(--gradient-bloom);
+  background-image: var(--gradient-ink);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
