@@ -10,6 +10,7 @@ import { Leadership } from "@/components/portfolio/Leadership";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
 import { Cursor } from "@/components/portfolio/Cursor";
+import { Ambient } from "@/components/portfolio/Ambient";
 
 const title = "Aditi S Prasad — Software Engineering, AI & Product";
 const description =
@@ -50,6 +51,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background">
+      <Ambient />
       <Cursor />
       <Navbar />
       <main>

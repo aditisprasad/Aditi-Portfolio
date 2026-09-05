@@ -32,7 +32,14 @@ export function SectionLabel({ index, title }: { index: string; title: string })
       <div className="mb-10 flex items-baseline gap-4">
         <span className="label-accent">{index}</span>
         <span className="label-xs">{title}</span>
-        <span className="h-px flex-1 bg-border" aria-hidden="true" />
+        <motion.span
+          className="bloom-rule h-px flex-1 origin-left"
+          aria-hidden="true"
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+        />
       </div>
     </Reveal>
   );

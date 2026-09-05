@@ -42,8 +42,16 @@ export function Hero() {
             transition={{ duration: 1, ease, delay: 0.1 }}
             className="display mt-5 text-[clamp(3.4rem,10vw,7.5rem)]"
           >
-            Hi, I&rsquo;m Aditi.
+            Hi, I&rsquo;m <span className="bloom-text italic">Aditi.</span>
           </motion.h1>
+
+          <motion.div
+            aria-hidden="true"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1.3, ease, delay: 0.5 }}
+            className="bloom-rule mt-6 h-px w-40 origin-left"
+          />
 
           <motion.p
             initial={{ opacity: 0, y: 18 }}
