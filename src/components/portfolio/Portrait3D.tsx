@@ -45,17 +45,34 @@ export function Portrait3D() {
         className="soft-light pointer-events-none absolute -inset-16 rounded-full blur-2xl"
       />
 
+      {/* colour aura behind the portrait */}
+      <motion.div
+        aria-hidden="true"
+        style={{ x: useTransform(sx, [-1, 1], [24, -24]), y: glowY }}
+        className="animate-bloom pointer-events-none absolute inset-8 rounded-full opacity-70 blur-[70px]"
+      >
+        <div className="bloom-rule size-full rounded-full opacity-45" />
+      </motion.div>
+
       {/* thin metallic rings + fine lines for depth */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <motion.div
-          style={{ x: useTransform(sx, [-1, 1], [12, -12]) }}
-          className="absolute -left-10 top-16 size-40 rounded-full border border-foreground/10"
+          style={{ x: useTransform(sx, [-1, 1], [14, -14]) }}
+          className="animate-float-soft absolute -left-10 top-16 size-40 rounded-full border border-foreground/10"
         />
         <motion.div
-          style={{ x: useTransform(sx, [-1, 1], [-16, 16]) }}
+          style={{ x: useTransform(sx, [-1, 1], [-18, 18]) }}
           className="absolute -right-8 bottom-24 size-56 rounded-full border border-accent/25"
         />
-        <div className="absolute -bottom-6 left-1/2 h-px w-[120%] -translate-x-1/2 bg-gradient-to-r from-transparent via-foreground/12 to-transparent" />
+        <motion.div
+          style={{ x: useTransform(sx, [-1, 1], [-9, 9]), y: useTransform(sy, [-1, 1], [8, -8]) }}
+          className="soft-shadow absolute right-2 top-8 size-24 rounded-full border border-violet/25 bg-card/40 backdrop-blur-sm"
+        />
+        <motion.div
+          style={{ x: useTransform(sx, [-1, 1], [20, -20]) }}
+          className="animate-float-soft absolute -left-4 bottom-10 size-14 rounded-full border border-mint/40 bg-mint/10"
+        />
+        <div className="absolute -bottom-6 left-1/2 h-px w-[120%] -translate-x-1/2 bg-gradient-to-r from-transparent via-violet/25 to-transparent" />
       </div>
 
       <motion.div
