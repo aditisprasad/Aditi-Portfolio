@@ -6,7 +6,7 @@ export function Skills() {
     <section id="skills" className="mx-auto max-w-[1400px] px-6 py-28 md:px-10 md:py-36">
       <SectionLabel index="04" title="Skills" />
 
-      <div className="space-y-14">
+      <div className="space-y-6">
         {skills.map((group, i) => (
           <Reveal key={group.label} delay={i * 0.05}>
             <div className="panel grid gap-5 rounded-[1rem] p-6 md:grid-cols-[0.3fr_1fr] md:gap-12 md:p-8">
