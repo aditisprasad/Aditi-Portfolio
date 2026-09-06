@@ -64,7 +64,9 @@ function Index() {
         <Work />
         <DesignProcess />
         <Leadership />
+        <Resume />
         <Contact />
+
       </main>
       <Footer />
     </div>
