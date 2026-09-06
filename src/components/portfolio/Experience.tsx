@@ -34,10 +34,6 @@ export function Experience() {
             </Reveal>
           </li>
         ))}
-
-            </Reveal>
-          </li>
-        ))}
       </ol>
     </section>
   );
