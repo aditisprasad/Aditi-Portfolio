@@ -5,9 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system — editorial, premium, softly colourful.
- * Ivory-cream paper, deep plum ink, sunset bloom accents (peach / coral / violet).
- * Display: Cormorant Garamond. Body: Karla.
+ * Design system — dark editorial creative-tech.
+ * Near-black warm canvas with a fine dot grid, cream ink, crimson accent,
+ * soft peach/violet/mint bloom for depth.
+ * Display: Bodoni Moda. Body: Manrope. Labels: JetBrains Mono.
  * All colors use oklch. Never hardcode colors in components.
  */
 
@@ -19,8 +20,10 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  --font-display: "Cormorant Garamond", "Cormorant", Georgia, serif;
-  --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bodoni Moda", "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -110,42 +113,43 @@
 
 :root {
   --radius: 0.25rem;
-  --ivory: oklch(0.983 0.009 68);
-  --ivory-deep: oklch(0.952 0.02 62);
-  --ink: oklch(0.255 0.019 310);
-  --peach: oklch(0.865 0.062 62);
-  --coral: oklch(0.715 0.135 5);
-  --violet: oklch(0.585 0.165 288);
-  --mint: oklch(0.83 0.075 175);
+  --ivory: oklch(0.945 0.012 82);
+  --ivory-deep: oklch(0.22 0.012 25);
+  --ink: oklch(0.13 0.008 25);
+  --peach: oklch(0.83 0.075 62);
+  --coral: oklch(0.62 0.2 22);
+  --violet: oklch(0.6 0.17 292);
+  --mint: oklch(0.8 0.09 172);
 
-  --background: oklch(0.983 0.009 68);
-  --foreground: oklch(0.255 0.019 310);
-  --card: oklch(0.992 0.005 68);
-  --card-foreground: oklch(0.255 0.019 310);
-  --popover: oklch(0.992 0.005 68);
-  --popover-foreground: oklch(0.255 0.019 310);
-  --primary: oklch(0.255 0.019 310);
-  --primary-foreground: oklch(0.983 0.009 68);
-  --secondary: oklch(0.952 0.02 62);
-  --secondary-foreground: oklch(0.255 0.019 310);
-  --muted: oklch(0.952 0.02 62);
-  --muted-foreground: oklch(0.505 0.028 312);
-  --accent: oklch(0.66 0.145 8);
-  --accent-foreground: oklch(0.992 0.005 68);
-  --destructive: oklch(0.55 0.19 22);
-  --destructive-foreground: oklch(0.992 0.005 68);
-  --border: oklch(0.895 0.019 60);
-  --input: oklch(0.895 0.019 60);
-  --ring: oklch(0.585 0.165 288);
+  --background: oklch(0.135 0.008 25);
+  --foreground: oklch(0.945 0.012 82);
+  --card: oklch(0.185 0.011 25);
+  --card-foreground: oklch(0.945 0.012 82);
+  --popover: oklch(0.185 0.011 25);
+  --popover-foreground: oklch(0.945 0.012 82);
+  --primary: oklch(0.945 0.012 82);
+  --primary-foreground: oklch(0.135 0.008 25);
+  --secondary: oklch(0.215 0.012 25);
+  --secondary-foreground: oklch(0.945 0.012 82);
+  --muted: oklch(0.215 0.012 25);
+  --muted-foreground: oklch(0.7 0.015 70);
+  --accent: oklch(0.635 0.205 22);
+  --accent-foreground: oklch(0.135 0.008 25);
+  --destructive: oklch(0.58 0.2 22);
+  --destructive-foreground: oklch(0.98 0.005 82);
+  --border: oklch(0.3 0.014 25);
+  --input: oklch(0.3 0.014 25);
+  --ring: oklch(0.635 0.205 22);
 
   --shadow-float:
-    0 2px 6px oklch(0.255 0.019 310 / 0.05), 0 20px 44px oklch(0.585 0.165 288 / 0.1),
-    0 54px 100px oklch(0.715 0.135 5 / 0.12);
-  --shadow-soft: 0 14px 44px oklch(0.585 0.165 288 / 0.1);
+    0 2px 6px oklch(0 0 0 / 0.5), 0 24px 56px oklch(0 0 0 / 0.55),
+    0 60px 120px oklch(0.62 0.2 22 / 0.18);
+  --shadow-soft: 0 18px 54px oklch(0 0 0 / 0.45);
   --gradient-light: radial-gradient(
-    60% 55% at 62% 32%,
-    oklch(1 0 0 / 0.85) 0%,
-    oklch(1 0 0 / 0) 70%
+    58% 52% at 62% 30%,
+    oklch(0.635 0.205 22 / 0.2) 0%,
+    oklch(0.6 0.17 292 / 0.08) 42%,
+    oklch(0 0 0 / 0) 72%
   );
   --gradient-bloom: linear-gradient(
     100deg,
@@ -156,12 +160,14 @@
   );
   --gradient-ink: linear-gradient(
     100deg,
-    oklch(0.55 0.16 12) 0%,
-    oklch(0.48 0.17 300) 45%,
-    oklch(0.52 0.12 200) 75%,
-    oklch(0.55 0.16 12) 100%
+    oklch(0.97 0.01 82) 0%,
+    oklch(0.7 0.19 22) 40%,
+    oklch(0.86 0.06 60) 68%,
+    oklch(0.97 0.01 82) 100%
   );
+  --dot: oklch(0.55 0.02 25 / 0.75);
 }
+
 
 @layer base {
   * {
@@ -192,7 +198,7 @@
 
 /* Editorial micro label */
 @utility label-xs {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: 0.625rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
@@ -200,18 +206,25 @@
 }
 
 @utility label-accent {
-  font-family: var(--font-sans);
+  font-family: var(--font-mono);
   font-size: 0.625rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--accent);
 }
 
+@utility mono-head {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+
 @utility display {
   font-family: var(--font-display);
   font-weight: 400;
   letter-spacing: -0.015em;
-  line-height: 0.98;
+  line-height: 1;
 }
 
 @utility bloom-text {
@@ -232,9 +245,22 @@
 @utility aurora {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(70px);
-  mix-blend-mode: multiply;
-  opacity: 0.55;
+  filter: blur(80px);
+  mix-blend-mode: screen;
+  opacity: 0.32;
+}
+
+/* Fine dot matrix field — the structural backdrop */
+@utility dot-grid {
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 26px 26px;
+  background-position: -13px -13px;
+}
+
+@utility panel {
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card) 72%, transparent);
+  backdrop-filter: blur(6px);
 }
 
 @utility paper-grain {
@@ -244,11 +270,12 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.3;
-    mix-blend-mode: multiply;
+    opacity: 0.14;
+    mix-blend-mode: screen;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
   }
 }
+
 
 @utility soft-light {
   background-image: var(--gradient-light);

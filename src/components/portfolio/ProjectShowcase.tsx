@@ -25,7 +25,7 @@ function Visual({ project, onOpen }: { project: Project; onOpen: () => void }) {
         animate={{ rotateX: tilt.x, rotateY: tilt.y }}
         transition={{ type: "spring", stiffness: 80, damping: 16 }}
         style={{ transformStyle: "preserve-3d" }}
-        className="group/vis block w-full overflow-hidden bg-ivory-deep/60 float-shadow"
+        className="group/vis block w-full overflow-hidden rounded-[1rem] border border-border bg-ivory-deep/60 float-shadow transition-colors duration-500 hover:border-accent/60"
       >
         <img
           src={project.image}
