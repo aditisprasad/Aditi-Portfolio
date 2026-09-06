@@ -7,7 +7,9 @@ import { Skills } from "@/components/portfolio/Skills";
 import { Work } from "@/components/portfolio/Work";
 import { DesignProcess } from "@/components/portfolio/DesignProcess";
 import { Leadership } from "@/components/portfolio/Leadership";
+import { Resume } from "@/components/portfolio/Resume";
 import { Contact } from "@/components/portfolio/Contact";
+
 import { Footer } from "@/components/portfolio/Footer";
 import { Cursor } from "@/components/portfolio/Cursor";
 import { Ambient } from "@/components/portfolio/Ambient";
