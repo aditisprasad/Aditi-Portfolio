@@ -9,24 +9,32 @@ export function Experience() {
     >
       <SectionLabel index="03" title="Experience" />
 
-      <ol className="border-t border-border">
+      <ol className="space-y-5">
         {experience.map((e, i) => (
           <li key={e.company}>
             <Reveal delay={i * 0.07}>
-              <div className="group relative grid gap-3 border-b border-border py-10 transition-colors duration-500 md:grid-cols-[0.9fr_1.4fr_0.8fr] md:items-baseline">
+              <div className="panel group relative overflow-hidden rounded-[1rem] p-6 transition-colors duration-500 hover:border-accent/60 md:p-9">
                 <span
                   aria-hidden="true"
-                  className="absolute left-0 top-0 h-px w-0 bg-accent transition-all duration-700 group-hover:w-full"
+                  className="bloom-rule absolute left-0 top-0 h-px w-0 transition-all duration-700 group-hover:w-full"
                 />
-                <span className="label-xs">{e.period}</span>
-                <div>
-                  <h3 className="display text-[clamp(1.6rem,3vw,2.4rem)] transition-transform duration-500 group-hover:translate-x-2">
-                    {e.role}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{e.note}</p>
+                <div className="flex flex-wrap items-baseline justify-between gap-3">
+                  <span className="label-accent">{e.company}</span>
+                  <span className="label-xs rounded-full border border-border px-3 py-1">
+                    {e.period}
+                  </span>
                 </div>
-                <span className="label-xs md:text-right">{e.company}</span>
+                <h3 className="display mt-4 text-[clamp(1.6rem,3vw,2.4rem)] transition-transform duration-500 group-hover:translate-x-2">
+                  {e.role}
+                </h3>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                  {e.note}
+                </p>
               </div>
+            </Reveal>
+          </li>
+        ))}
+
             </Reveal>
           </li>
         ))}
