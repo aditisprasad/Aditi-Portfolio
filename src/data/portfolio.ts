@@ -2,7 +2,7 @@ import supportgenie from "@/assets/work-supportgenie.jpg";
 import crownfit from "@/assets/work-crownfit.jpg";
 import finpsych from "@/assets/work-finpsych.jpg";
 import talentlens from "@/assets/work-talentlens.jpg";
-import intelledge from "@/assets/work-intelledge.jpg";
+import supplychainiq from "@/assets/work-supplychainiq.jpg";
 
 export type ProjectLayout = "text-left" | "text-right" | "centered";
 
@@ -62,12 +62,12 @@ export const projects: Project[] = [
   },
   {
     index: "05",
-    name: "Intelledge",
-    category: "AI / Voice",
-    description: "Multilingual AI campus assistant.",
-    image: intelledge,
+    name: "SupplyChainIQ",
+    category: "AI / Supply Chain",
+    description: "AI supply chain procurement intelligence platform.",
+    image: supplychainiq,
     layout: "centered",
-    tech: ["Python", "LLMs", "RAG", "React"],
+    tech: ["Python", "SQL", "PostgreSQL", "Power BI", "React", "FastAPI", "OpenAI API"],
     github: "https://github.com/aditisprasad",
   },
 ];
