@@ -77,52 +77,61 @@ export const experience = [
     role: "Full Stack Development Intern",
     company: "Skillbit Technologies",
     period: "Jan 2026 — Mar 2026",
-    note: "Worked on full-stack web features across frontend and backend.",
+    note: "Built and maintained full-stack web modules with React.js and Node.js/Express.js, and integrated RESTful APIs connecting the frontend to MongoDB.",
   },
   {
     role: "Software Development Intern",
     company: "Prodigy Infotech",
     period: "Jun 2025 — Jul 2025",
-    note: "Built software development tasks and applications with Python and JavaScript.",
-  },
-  {
-    role: "Web Development Intern",
-    company: "RD Infro Technology",
-    period: "Jan 2025 — Mar 2025",
-    note: "Developed responsive web interfaces and components.",
+    note: "Developed three desktop GUI applications in Python within two-week sprints, adding input validation and error handling to reduce runtime crashes.",
   },
 ];
+
+export const education = {
+  school: "Jain University",
+  degree: "B.Tech in Software Engineering",
+  location: "Bengaluru, Karnataka",
+  period: "Expected 2027",
+};
 
 export const skills = [
   {
-    label: "Development",
-    items: [
-      "Python",
-      "Java",
-      "JavaScript",
-      "React",
-      "Node.js",
-      "Express.js",
-      "FastAPI",
-      "Flask",
-    ],
+    label: "Languages",
+    items: ["Python", "Java"],
   },
   {
     label: "AI / ML",
-    items: ["RAG", "LLMs", "Pandas", "NumPy", "Scikit-learn", "OpenCV", "MediaPipe"],
+    items: ["RAG", "LLMs", "NumPy", "Pandas", "Scikit-learn", "OpenCV"],
   },
-  { label: "Data", items: ["SQL", "PostgreSQL", "MongoDB", "Power BI", "Excel"] },
+  { label: "Databases", items: ["SQL", "PostgreSQL", "MongoDB"] },
+  { label: "Core Concepts", items: ["DSA", "OOP", "Operating Systems"] },
   {
-    label: "Product / Design",
-    items: ["UI/UX", "Design Thinking", "Product Development", "User-Centered Design"],
+    label: "Web Development",
+    items: ["HTML", "CSS", "JavaScript", "React.js", "Node.js", "Express.js", "Flask"],
   },
-  { label: "Tools", items: ["GitHub", "VS Code", "Postman"] },
+  { label: "Tools", items: ["GitHub", "VS Code", "Postman", "Power BI", "Excel"] },
+  {
+    label: "Soft Skills",
+    items: [
+      "Public Speaking",
+      "Logical Problem-Solving",
+      "Team Collaboration",
+      "Effective Communication",
+      "Event Management",
+      "Marketing",
+    ],
+  },
 ];
 
 export const leadership = [
-  { org: "FOSS Club", role: "Marketing & Management Lead" },
+  {
+    org: "FOSS Club",
+    role: "Marketing & Management Lead · Jan 2025 — May 2026",
+  },
   { org: "Grassroot Research and Innovation Movement", role: "Core Team Member" },
 ];
+
+export const languages = ["English", "Kannada", "Hindi", "Telugu", "German (Learning)"];
 
 export const process = [
   "Problem",
