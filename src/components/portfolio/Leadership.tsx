@@ -1,4 +1,4 @@
-import { leadership } from "@/data/portfolio";
+import { education, languages, leadership } from "@/data/portfolio";
 import { Reveal } from "./Reveal";
 
 export function Leadership() {
