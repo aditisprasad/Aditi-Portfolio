@@ -137,5 +137,5 @@ export const contact = {
   email: "aditisprasad16@gmail.com",
   linkedin: "https://linkedin.com/in/aditi-prasad-678808299",
   github: "https://github.com/aditisprasad",
-  resume: "https://drive.google.com/file/d/1quy80GJwGCa6sgahNQpG7EVr-vAEDIW3/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1zwLRrb4gyEuPSywIt6433A5YzA9omLVr/view?usp=sharing",
 };
