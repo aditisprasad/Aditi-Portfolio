@@ -2,7 +2,7 @@ import supportgenie from "@/assets/work-supportgenie.jpg";
 import crownfit from "@/assets/work-crownfit.jpg";
 import finpsych from "@/assets/work-finpsych.jpg";
 import talentlens from "@/assets/work-talentlens.jpg";
-import intelledge from "@/assets/work-intelledge.jpg";
+import supplychainiq from "@/assets/work-supplychainiq.jpg";
 
 export type ProjectLayout = "text-left" | "text-right" | "centered";
 
@@ -27,7 +27,7 @@ export const projects: Project[] = [
     description: "AI-powered customer support system.",
     image: supportgenie,
     layout: "text-left",
-    tech: ["Python", "FastAPI", "RAG", "LLMs", "React"],
+    tech: ["Python", "FastAPI", "React.js", "LangChain", "OpenAI API", "FAISS", "PostgreSQL"],
     github: "https://github.com/aditisprasad",
   },
   {
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     description: "AI-powered pageant preparation platform.",
     image: crownfit,
     layout: "text-right",
-    tech: ["React", "Node.js", "MediaPipe", "OpenCV"],
+    tech: ["Python", "Scikit-learn", "OpenCV", "MediaPipe", "Google Maps API"],
     github: "https://github.com/aditisprasad",
   },
   {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     description: "Behavioral finance analytics platform.",
     image: finpsych,
     layout: "centered",
-    tech: ["Python", "Pandas", "Scikit-learn", "PostgreSQL"],
+    tech: ["React", "Python", "Scikit-learn", "Isolation Forest", "K-Means"],
     github: "https://github.com/aditisprasad",
   },
   {
@@ -57,17 +57,17 @@ export const projects: Project[] = [
     description: "Workforce and recruitment intelligence platform.",
     image: talentlens,
     layout: "text-left",
-    tech: ["Python", "SQL", "Power BI", "Flask"],
+    tech: ["Python", "SQL", "PostgreSQL", "Power BI", "React", "FastAPI"],
     github: "https://github.com/aditisprasad",
   },
   {
     index: "05",
-    name: "Intelledge",
-    category: "AI / Voice",
-    description: "Multilingual AI campus assistant.",
-    image: intelledge,
+    name: "SupplyChainIQ",
+    category: "AI / Supply Chain",
+    description: "AI supply chain procurement intelligence platform.",
+    image: supplychainiq,
     layout: "centered",
-    tech: ["Python", "LLMs", "RAG", "React"],
+    tech: ["Python", "SQL", "PostgreSQL", "Power BI", "React", "FastAPI", "OpenAI API"],
     github: "https://github.com/aditisprasad",
   },
 ];
@@ -77,52 +77,61 @@ export const experience = [
     role: "Full Stack Development Intern",
     company: "Skillbit Technologies",
     period: "Jan 2026 — Mar 2026",
-    note: "Worked on full-stack web features across frontend and backend.",
+    note: "Built and maintained full-stack web modules with React.js and Node.js/Express.js, and integrated RESTful APIs connecting the frontend to MongoDB.",
   },
   {
     role: "Software Development Intern",
     company: "Prodigy Infotech",
     period: "Jun 2025 — Jul 2025",
-    note: "Built software development tasks and applications with Python and JavaScript.",
-  },
-  {
-    role: "Web Development Intern",
-    company: "RD Infro Technology",
-    period: "Jan 2025 — Mar 2025",
-    note: "Developed responsive web interfaces and components.",
+    note: "Developed three desktop GUI applications in Python within two-week sprints, adding input validation and error handling to reduce runtime crashes.",
   },
 ];
+
+export const education = {
+  school: "Jain University",
+  degree: "B.Tech in Software Engineering",
+  location: "Bengaluru, Karnataka",
+  period: "Expected 2027",
+};
 
 export const skills = [
   {
-    label: "Development",
-    items: [
-      "Python",
-      "Java",
-      "JavaScript",
-      "React",
-      "Node.js",
-      "Express.js",
-      "FastAPI",
-      "Flask",
-    ],
+    label: "Languages",
+    items: ["Python", "Java"],
   },
   {
     label: "AI / ML",
-    items: ["RAG", "LLMs", "Pandas", "NumPy", "Scikit-learn", "OpenCV", "MediaPipe"],
+    items: ["RAG", "LLMs", "NumPy", "Pandas", "Scikit-learn", "OpenCV"],
   },
-  { label: "Data", items: ["SQL", "PostgreSQL", "MongoDB", "Power BI", "Excel"] },
+  { label: "Databases", items: ["SQL", "PostgreSQL", "MongoDB"] },
+  { label: "Core Concepts", items: ["DSA", "OOP", "Operating Systems"] },
   {
-    label: "Product / Design",
-    items: ["UI/UX", "Design Thinking", "Product Development", "User-Centered Design"],
+    label: "Web Development",
+    items: ["HTML", "CSS", "JavaScript", "React.js", "Node.js", "Express.js", "Flask"],
   },
-  { label: "Tools", items: ["GitHub", "VS Code", "Postman"] },
+  { label: "Tools", items: ["GitHub", "VS Code", "Postman", "Power BI", "Excel"] },
+  {
+    label: "Soft Skills",
+    items: [
+      "Public Speaking",
+      "Logical Problem-Solving",
+      "Team Collaboration",
+      "Effective Communication",
+      "Event Management",
+      "Marketing",
+    ],
+  },
 ];
 
 export const leadership = [
-  { org: "FOSS Club", role: "Marketing & Management Lead" },
+  {
+    org: "FOSS Club",
+    role: "Marketing & Management Lead · Jan 2025 — May 2026",
+  },
   { org: "Grassroot Research and Innovation Movement", role: "Core Team Member" },
 ];
+
+export const languages = ["English", "Kannada", "Hindi", "Telugu", "German (Learning)"];
 
 export const process = [
   "Problem",
