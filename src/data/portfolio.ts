@@ -85,6 +85,12 @@ export const experience = [
     period: "Jun 2025 — Jul 2025",
     note: "Developed three desktop GUI applications in Python within two-week sprints, adding input validation and error handling to reduce runtime crashes.",
   },
+  {
+    role: "Web Development Intern",
+    company: "RD Infro Technology",
+    period: "Jan 2025 — Mar 2025",
+    note: "Assisted with frontend development tasks and built responsive web components using HTML, CSS, and JavaScript.",
+  },
 ];
 
 export const education = {
