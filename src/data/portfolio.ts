@@ -27,7 +27,7 @@ export const projects: Project[] = [
     description: "AI-powered customer support system.",
     image: supportgenie,
     layout: "text-left",
-    tech: ["Python", "FastAPI", "RAG", "LLMs", "React"],
+    tech: ["Python", "FastAPI", "React.js", "LangChain", "OpenAI API", "FAISS", "PostgreSQL"],
     github: "https://github.com/aditisprasad",
   },
   {
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     description: "AI-powered pageant preparation platform.",
     image: crownfit,
     layout: "text-right",
-    tech: ["React", "Node.js", "MediaPipe", "OpenCV"],
+    tech: ["Python", "Scikit-learn", "OpenCV", "MediaPipe", "Google Maps API"],
     github: "https://github.com/aditisprasad",
   },
   {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     description: "Behavioral finance analytics platform.",
     image: finpsych,
     layout: "centered",
-    tech: ["Python", "Pandas", "Scikit-learn", "PostgreSQL"],
+    tech: ["React", "Python", "Scikit-learn", "Isolation Forest", "K-Means"],
     github: "https://github.com/aditisprasad",
   },
   {
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     description: "Workforce and recruitment intelligence platform.",
     image: talentlens,
     layout: "text-left",
-    tech: ["Python", "SQL", "Power BI", "Flask"],
+    tech: ["Python", "SQL", "PostgreSQL", "Power BI", "React", "FastAPI"],
     github: "https://github.com/aditisprasad",
   },
   {
