@@ -19,11 +19,24 @@ export function Leadership() {
         ))}
       </div>
 
-      <Reveal delay={0.16}>
-        <p className="label-xs mt-12">
-          Leadership · Marketing · Collaboration · Research · Ideation
-        </p>
-      </Reveal>
+      <div className="mt-16 grid gap-10 md:grid-cols-2 md:gap-20">
+        <Reveal delay={0.16}>
+          <div className="border-t border-border pt-6">
+            <p className="label-accent">Education</p>
+            <p className="mt-3 text-base text-foreground">{education.degree}</p>
+            <p className="label-xs mt-2">
+              {education.school} · {education.location} · {education.period}
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.22}>
+          <div className="border-t border-border pt-6">
+            <p className="label-accent">Languages</p>
+            <p className="mt-3 text-base text-foreground">{languages.join(" · ")}</p>
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }
