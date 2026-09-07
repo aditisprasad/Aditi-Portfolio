@@ -40,7 +40,7 @@ export function Resume() {
               <span className="label-accent">PDF</span>
             </div>
             <iframe
-              src="https://drive.google.com/file/d/1quy80GJwGCa6sgahNQpG7EVr-vAEDIW3/preview"
+              src="https://drive.google.com/file/d/1zwLRrb4gyEuPSywIt6433A5YzA9omLVr/preview"
               title="Résumé of Aditi S Prasad"
               loading="lazy"
               className="h-[460px] w-full rounded-[0.9rem] border border-border bg-ivory-deep"
