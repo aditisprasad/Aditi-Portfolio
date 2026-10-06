@@ -106,11 +106,7 @@ export function Portrait3D() {
               height={926}
               loading="eager"
               onError={() => setFailed(true)}
-              className="relative block w-full [filter:drop-shadow(0_30px_50px_rgb(0_0_0/0.45))]"
-            />
-            <div
-              aria-hidden="true"
-              className="bloom-rule pointer-events-none absolute inset-x-10 bottom-0 h-px opacity-60"
+              className="relative block w-full [mask-image:linear-gradient(to_bottom,black_72%,transparent_99%)] [filter:drop-shadow(0_30px_50px_rgb(0_0_0/0.45))]"
             />
           </div>
         )}
