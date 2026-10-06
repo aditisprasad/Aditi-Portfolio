@@ -86,13 +86,6 @@ export function Portrait3D() {
         }}
         className="relative"
       >
-        {/* depth layer behind the portrait */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-8 bottom-6 top-12 bg-ivory-deep/70"
-          style={{ transform: "translateZ(-60px)" }}
-        />
-
         {failed ? (
           <div
             className="flex aspect-[3/4] w-full items-center justify-center border border-dashed border-foreground/25 bg-card"
@@ -102,21 +95,22 @@ export function Portrait3D() {
           </div>
         ) : (
           <div
-            className="float-shadow relative overflow-hidden rounded-[2rem] border border-border bg-card p-2"
+            className="animate-float-soft relative"
             style={{ transform: "translateZ(40px)" }}
           >
+            {/* Replace with Aditi's professional portrait (transparent PNG). */}
             <img
               src={PORTRAIT_SRC}
               alt="Portrait of Aditi S Prasad"
-              width={800}
-              height={1100}
+              width={944}
+              height={926}
               loading="eager"
               onError={() => setFailed(true)}
-              className="relative block w-full rounded-[1.6rem] object-cover"
+              className="relative block w-full [filter:drop-shadow(0_30px_50px_rgb(0_0_0/0.45))]"
             />
             <div
               aria-hidden="true"
-              className="bloom-rule pointer-events-none absolute inset-x-2 bottom-2 h-px opacity-70"
+              className="bloom-rule pointer-events-none absolute inset-x-10 bottom-0 h-px opacity-60"
             />
           </div>
         )}
