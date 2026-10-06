@@ -86,13 +86,6 @@ export function Portrait3D() {
         }}
         className="relative"
       >
-        {/* depth layer behind the portrait */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-8 bottom-6 top-12 bg-ivory-deep/70"
-          style={{ transform: "translateZ(-60px)" }}
-        />
-
         {failed ? (
           <div
             className="flex aspect-[3/4] w-full items-center justify-center border border-dashed border-foreground/25 bg-card"
@@ -102,21 +95,18 @@ export function Portrait3D() {
           </div>
         ) : (
           <div
-            className="float-shadow relative overflow-hidden rounded-[2rem] border border-border bg-card p-2"
+            className="animate-float-soft relative"
             style={{ transform: "translateZ(40px)" }}
           >
+            {/* Replace with Aditi's professional portrait (transparent PNG). */}
             <img
               src={PORTRAIT_SRC}
               alt="Portrait of Aditi S Prasad"
-              width={800}
-              height={1100}
+              width={944}
+              height={926}
               loading="eager"
               onError={() => setFailed(true)}
-              className="relative block w-full rounded-[1.6rem] object-cover"
-            />
-            <div
-              aria-hidden="true"
-              className="bloom-rule pointer-events-none absolute inset-x-2 bottom-2 h-px opacity-70"
+              className="relative block w-full [mask-image:linear-gradient(to_bottom,black_72%,transparent_99%)] [filter:drop-shadow(0_30px_50px_rgb(0_0_0/0.45))]"
             />
           </div>
         )}
@@ -131,7 +121,7 @@ export function Portrait3D() {
         {/* floating editorial chip */}
         <motion.div
           style={{ transform: "translateZ(90px)" }}
-          className="absolute -left-10 bottom-6 hidden border border-border bg-card/90 px-3 py-2 backdrop-blur-sm md:block"
+          className="absolute -left-12 -bottom-2 hidden border border-border bg-card/90 px-3 py-2 backdrop-blur-sm md:block"
         >
           <span className="label-xs">Software × AI × Data × Product</span>
         </motion.div>
